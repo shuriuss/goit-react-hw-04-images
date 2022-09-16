@@ -9,7 +9,6 @@ export const fetchSearch = async (search, page) => {
   try {
     const URL = `${BASE_URL}?q=${search}&page=${page}&key=${API_KEY}&image_type=photo&orientation=horizontal&per_page=${PER_PAGE}`;
     const r = await axios.get(URL);
-    console.log(r);
     return r.data;
   } catch (error) {
     console.error('Error:', error.message);

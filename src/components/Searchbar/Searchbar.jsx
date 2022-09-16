@@ -18,7 +18,7 @@ export function Searchbar({ onSubmitForm }) {
   return (
     <header className={s.searchbar}>
       <form className={s.form} onSubmit={headleSubmit}>
-        <button type="submit">
+        <button type="submit" className={s.button}>
           <span className={s.buttonlabel}>Search</span>
         </button>
 

@@ -26,10 +26,10 @@ export function App() {
 
     setIsLoading(true);
     fetchSearch(search, page).then(data => {
-      setImgItem([...imgItem, ...data.hits]);
+      setImgItem(prev => {
+        return [...prev, ...data.hits];
+      });
       setIsLoading(false);
-
-      
     });
   }, [search, page]);
 
